@@ -3,6 +3,7 @@
 :set tabstop=2 " Tab width
 :set shiftwidth=2 " Indent width
 :set expandtab " Use spaces instead of tabs
+:set autoindent " Auto indent
 :set smartindent " Smart indent
 :set mouse=a " Mouse support
 
@@ -10,7 +11,7 @@
 call plug#begin()
 
 " Code completion
-Plug 'neoclide/coc.nvim' 
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 " Airline
 Plug 'vim-airline/vim-airline'
 " File system
@@ -23,6 +24,7 @@ Plug 'github/copilot.vim'
 " Languages
 Plug 'leafgarland/typescript-vim'
 Plug 'elixir-editors/vim-elixir'
+Plug 'lervag/vimtex'
 " Git
 Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
@@ -124,3 +126,7 @@ command! -bang -nargs=* GGrep
   \ call fzf#vim#grep(
   \   'git grep --line-number '.shellescape(<q-args>), 0,
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
+
+" VimTex
+let g:vimtex_view_general_viewer = 'firefox'
+let g:vimtex_view_general_options = '@pdf'
