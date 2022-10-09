@@ -49,7 +49,7 @@ map <c-o> :Buffers<cr>
 map <c-p> :Files<cr>
 nnoremap <c-f> :Rg<cr>
 inoremap <silent><expr> <c-space> coc#refresh()
-
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Set jellybeans theme
 :colorscheme jellybeans
