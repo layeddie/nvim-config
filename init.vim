@@ -48,6 +48,7 @@ nnoremap <C-t> :term<CR>
 map <c-o> :Buffers<cr>
 map <c-p> :Files<cr>
 nnoremap <c-f> :Rg<cr>
+inoremap <silent><expr> <c-space> coc#refresh()
 
 
 " Set jellybeans theme
