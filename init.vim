@@ -60,7 +60,7 @@ au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 
 " Plugin config
 let NERDTreeShowHidden = 1 " Show hidden files
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-elixir'] " CoC extensions
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-elixir'] " CoC extensions
 let g:blamer_enabled = 1 " Enable Git blame
 let g:mix_format_on_save = 1 " Format Elixir code on save
 
