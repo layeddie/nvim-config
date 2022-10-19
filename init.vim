@@ -37,6 +37,7 @@ Plug 'tc50cal/vim-terminal'
 Plug 'mhinz/vim-mix-format'
 Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-rooter'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
@@ -59,6 +60,7 @@ au BufNewFile,BufRead *.ts setlocal filetype=typescript
 au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 
 " Plugin config
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*'] " Exclude fugitive and scp
 let NERDTreeShowHidden = 1 " Show hidden files
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-elixir'] " CoC extensions
 let g:blamer_enabled = 1 " Enable Git blame
