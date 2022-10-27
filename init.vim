@@ -122,15 +122,15 @@ let g:fzf_colors =
 " Custom commands
 " FZF files
 command! -bang -nargs=? -complete=dir Files
-    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--prompt=Open file > ', '--layout=reverse', '--info=inline']}), <bang>0)
 " FZF file content
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always -S -F '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),  <bang>0)
+  \   'rg --column --line-number --no-heading --color=always -S -F --colors "path:fg:yellow" --colors "line:fg:blue" '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview({'options': '--delimiter : --nth 4.. --prompt "Find > "'}),  <bang>0)
 " FZF branch select
 command! -bang -nargs=* Branches
-  \ call fzf#run(fzf#wrap({'source': 'git branch | sed s/[^[:alnum:]\/+._-]//g', 'sink': '!git checkout'}))
+  \ call fzf#run(fzf#wrap({'source': 'git branch | sed s/[^[:alnum:]\/+._-]//g', 'sink': 'Git checkout', 'options': '--prompt "Switch branch > "'}))
 
 " VimTex
 let g:vimtex_view_general_viewer = 'firefox'
