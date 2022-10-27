@@ -56,6 +56,12 @@ nnoremap <c-f> :Rg<cr>
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
+" GoTo code navigation.
+nmap <silent> def <Plug>(coc-definition)
+nmap <silent> tdef <Plug>(coc-type-definition)
+nmap <silent> impl <Plug>(coc-implementation)
+nmap <silent> ref <Plug>(coc-references) 
+
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
@@ -69,7 +75,7 @@ au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 " Plugin config
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*'] " Exclude fugitive and scp
 let NERDTreeShowHidden = 1 " Show hidden files
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-elixir'] " CoC extensions
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-elixir', 'coc-rust-analyzer'] " CoC extensions
 let g:blamer_enabled = 1 " Enable Git blame
 let g:mix_format_on_save = 1 " Format Elixir code on save
 
