@@ -44,13 +44,20 @@ call plug#end()
 " Key bindings
 nnoremap <C-y> :redo<CR>
 nnoremap <C-z> :u<CR>
+
 nnoremap <C-n> :NERDTreeToggle<CR>
+
 nnoremap <C-t> :term<CR>
+
 map <c-o> :Buffers<cr>
 map <c-p> :Files<cr>
 nnoremap <c-f> :Rg<cr>
+
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " Set jellybeans theme
 :colorscheme jellybeans
