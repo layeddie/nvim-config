@@ -117,8 +117,8 @@ command! -bang -nargs=? -complete=dir Files
 " Get text in files with Rg
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
+  \   'rg --column --line-number --no-heading --color=always -S -F '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),  <bang>0)
 
 " Ripgrep advanced
 function! RipgrepFzf(query, fullscreen)
