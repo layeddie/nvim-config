@@ -25,6 +25,7 @@ Plug 'github/copilot.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'lervag/vimtex'
+Plug 'rust-lang/rust.vim'
 " Git
 Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
@@ -78,6 +79,7 @@ let NERDTreeShowHidden = 1 " Show hidden files
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-elixir', 'coc-rust-analyzer'] " CoC extensions
 let g:blamer_enabled = 1 " Enable Git blame
 let g:mix_format_on_save = 1 " Format Elixir code on save
+let g:rustfmt_autosave = 1 " Format Rust code on save
 
 " Signify
 let g:signify_sign_add = '+'
