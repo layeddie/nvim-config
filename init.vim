@@ -52,9 +52,9 @@ nnoremap <C-t> :term fish<CR>i
 
 map <c-o> :Buffers<cr>
 map <c-p> :Files<cr>
-nnoremap <c-f> :Rg<cr>
-nnoremap <c-c> :Commits<cr>
-nnoremap <c-b> :Branches<cr>
+map <c-f> :Rg<cr>
+map <c-c> :Commits<cr>
+map <c-b> :Branches<cr>
 
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
