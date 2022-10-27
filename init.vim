@@ -67,6 +67,7 @@ nmap <silent> ref <Plug>(coc-references)
 
 nmap <silent> ga :GitAdd<CR>
 nmap <silent> gs :Git status<CR>
+nmap <silent> gd :Git diff<CR>
 nmap <silent> gpl :Git pull<CR>
 nmap <silent> gc :Git commit<CR>
 nmap <silent> gps :Git push<CR>
