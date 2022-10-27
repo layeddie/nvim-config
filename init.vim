@@ -49,7 +49,6 @@ nnoremap <C-z> :u<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 
 nnoremap <C-t> :term fish<CR>i
-tnoremap <Esc> <C-\><C-n>
 
 map <c-o> :Buffers<cr>
 map <c-p> :Files<cr>
