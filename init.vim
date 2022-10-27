@@ -70,6 +70,8 @@ nmap <silent> gps :Git push<CR>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
+vnoremap <c-c> :Commentary<CR>
+
 " Set jellybeans theme
 :colorscheme jellybeans
 
