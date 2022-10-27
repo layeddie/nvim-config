@@ -66,6 +66,7 @@ nmap <silent> ref <Plug>(coc-references)
 
 nmap <silent> gpl :Git pull<CR>
 nmap <silent> gps :Git push<CR>
+nmap <silent> gf :Git fetch<CR>
 
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
