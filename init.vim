@@ -39,6 +39,7 @@ Plug 'mhinz/vim-mix-format'
 Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-rooter'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'michaelb/vim-tips'
 
 call plug#end()
 
