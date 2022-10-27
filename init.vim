@@ -53,6 +53,7 @@ nnoremap <C-t> :term<CR>
 map <c-o> :Buffers<cr>
 map <c-p> :Files<cr>
 nnoremap <c-f> :Rg<cr>
+nnoremap <c-c> :Commits<cr>
 
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
