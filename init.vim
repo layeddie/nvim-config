@@ -54,6 +54,7 @@ map <c-o> :Buffers<cr>
 map <c-p> :Files<cr>
 nnoremap <c-f> :Rg<cr>
 nnoremap <c-c> :Commits<cr>
+nnoremap <c-b> :Branches<cr>
 
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
@@ -61,7 +62,7 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " GoTo code navigation.
 nmap <silent> def <Plug>(coc-definition)
 nmap <silent> tdef <Plug>(coc-type-definition)
-nmap <silent> impl <Plug>(coc-implementation)
+nmap <silent> di <Plug>(coc-implementation)
 nmap <silent> ref <Plug>(coc-references) 
 
 vnoremap <Tab> >gv
@@ -127,6 +128,9 @@ command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always -S -F '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),  <bang>0)
+" FZF branch select
+command! -bang -nargs=* Branches
+  \ call fzf#run(fzf#wrap({'source': 'git branch | sed s/[^[:alnum:]\/+._-]//g', 'sink': '!git checkout'}))
 
 " VimTex
 let g:vimtex_view_general_viewer = 'firefox'
