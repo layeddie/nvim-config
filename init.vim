@@ -59,11 +59,13 @@ nnoremap <c-b> :Branches<cr>
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
-" GoTo code navigation.
 nmap <silent> def <Plug>(coc-definition)
 nmap <silent> tdef <Plug>(coc-type-definition)
 nmap <silent> di <Plug>(coc-implementation)
 nmap <silent> ref <Plug>(coc-references) 
+
+nmap <silent> gpl :Git pull<CR>
+nmap <silent> gps :Git push<CR>
 
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
