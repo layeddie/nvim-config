@@ -65,12 +65,12 @@ nmap <silent> tdef <Plug>(coc-type-definition)
 nmap <silent> di <Plug>(coc-implementation)
 nmap <silent> ref <Plug>(coc-references) 
 
-nmap <silent> ga :GitAdd<CR>
 nmap <silent> gs :Git status<CR>
 nmap <silent> gd :Git diff<CR>
 nmap <silent> gpl :Git pull<CR>
 nmap <silent> gc :Git commit<CR>
 nmap <silent> gps :Git push<CR>
+nmap <silent> gpfs :Git push -f<CR>
 nmap <silent> gf :Git fetch<CR>
 
 vnoremap <Tab> >gv
@@ -141,9 +141,6 @@ command! -bang -nargs=* Rg
 " FZF branch select
 command! -bang -nargs=* Branches
   \ call fzf#run(fzf#wrap({'source': 'git branch | sed s/[^[:alnum:]\/+._-]//g', 'sink': 'Git checkout', 'options': '--prompt "Switch branch > "'}))
-" FZF Git add
-command! -bang -nargs=* GitAdd
-  \ call fzf#run(fzf#wrap({'source': 'git ls-files --modified --deleted --others --exclude-standard', 'sink': 'Git add', 'options': '--prompt "Add > "'}))
 
 " VimTex
 let g:vimtex_view_general_viewer = 'firefox'
